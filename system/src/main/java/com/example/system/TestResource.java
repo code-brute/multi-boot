@@ -57,4 +57,12 @@ public class TestResource {
             }
         });
     }
+
+    @RequestMapping(value = "/entity", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public AssetsCatalog entity() {
+        AssetsCatalog assetsCatalog = new AssetsCatalog();
+        assetsCatalog.setId(1);
+        assetsCatalog.setName("11");
+        return assetsCatalog;
+    }
 }
