@@ -15,6 +15,7 @@
     <modules>
         <module>system</module>
         <module>assets</module>
+        <module>java8-demo</module>
     </modules>
 
 

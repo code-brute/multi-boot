@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/parent/pom.xml" />
         <option value="$PROJECT_DIR$/system/pom.xml" />
         <option value="$PROJECT_DIR$/assets/pom.xml" />
+        <option value="$PROJECT_DIR$/java8-demo/pom.xml" />
       </list>
     </option>
   </component>

@@ -2,6 +2,7 @@ package com.example.system;
 
 import com.example.assets.entity.AssetsCatalog;
 
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
@@ -43,7 +44,8 @@ public class AssetsCatalogDOM {
             return assetsCatalogMDAO.queryList();
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void testTime() {
        DateTimeFormatter formatter = new DateTimeFormatterBuilder()
                 .appendValue(YEAR, 4, 10, SignStyle.EXCEEDS_PAD)
                 .appendValue(MONTH_OF_YEAR, 2)
@@ -78,5 +80,11 @@ public class AssetsCatalogDOM {
 
         String str =  "status.loginLog.loginFlag";
         System.out.println(str.substring(str.indexOf(".")+1));
+    }
+
+    @Test
+    public void testJava() {
+
+
     }
 }
