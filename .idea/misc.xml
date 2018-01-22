@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/system/pom.xml" />
         <option value="$PROJECT_DIR$/assets/pom.xml" />
         <option value="$PROJECT_DIR$/java8-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/quartz-demo/pom.xml" />
       </list>
     </option>
   </component>

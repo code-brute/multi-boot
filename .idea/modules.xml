@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/java8-demo/java8-demo.iml" filepath="$PROJECT_DIR$/java8-demo/java8-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/multi-boot.iml" filepath="$PROJECT_DIR$/multi-boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/parent/parent.iml" filepath="$PROJECT_DIR$/parent/parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quartz-demo/quartz-demo.iml" filepath="$PROJECT_DIR$/quartz-demo/quartz-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/system/system.iml" filepath="$PROJECT_DIR$/system/system.iml" />
     </modules>
   </component>
