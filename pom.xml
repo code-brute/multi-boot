@@ -13,9 +13,10 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>system</module>
-        <module>assets</module>
         <module>java8-demo</module>
+        <module>core</module>
+        <module>activiti-demo</module>
+        <module>quartz-demo</module>
     </modules>
 
 

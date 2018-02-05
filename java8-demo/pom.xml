@@ -6,7 +6,14 @@
 	<groupId>com.java8.demo</groupId>
 	<artifactId>java8-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.38</version>
+        </dependency>
+    </dependencies>
+    <packaging>jar</packaging>
 
 	<name>java8-demo</name>
 	<description>java8-demo</description>
