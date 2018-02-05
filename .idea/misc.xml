@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/boot-web1" />
-    <file type="web" url="file://$PROJECT_DIR$/boot-web2" />
-    <file type="web" url="file://$PROJECT_DIR$/dog-web" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/parent/pom.xml" />
-        <option value="$PROJECT_DIR$/system/pom.xml" />
-        <option value="$PROJECT_DIR$/assets/pom.xml" />
-        <option value="$PROJECT_DIR$/java8-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/quartz-demo/pom.xml" />
       </list>
     </option>
   </component>

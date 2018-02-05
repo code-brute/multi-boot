@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="assets" />
-        <module name="java8-demo" />
-        <module name="system" />
-      </profile>
-    </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="assets" target="1.8" />
-      <module name="boot-web1" target="1.8" />
-      <module name="boot-web2" target="1.8" />
-      <module name="dog-web" target="1.8" />
-      <module name="java8-demo" target="1.8" />
       <module name="multi-boot" target="1.5" />
-      <module name="parent" target="1.8" />
-      <module name="person-web" target="1.8" />
-      <module name="system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

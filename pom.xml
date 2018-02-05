@@ -12,12 +12,6 @@
     <name>multi-boot</name>
     <description>Demo project for Spring Boot</description>
 
-    <modules>
-        <module>java8-demo</module>
-        <module>core</module>
-        <module>activiti-demo</module>
-        <module>quartz-demo</module>
-    </modules>
 
 
 
