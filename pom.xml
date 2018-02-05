@@ -11,6 +11,10 @@
 
     <name>multi-boot</name>
     <description>Demo project for Spring Boot</description>
+    <modules>
+        <module>core</module>
+        <module>activiti-demo</module>
+    </modules>
 
 
 

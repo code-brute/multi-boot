@@ -37,7 +37,7 @@ import javax.sql.DataSource;
 @ConditionalOnProperty(name = "spring.datasource.type",
         havingValue = "com.alibaba.druid.pool.DruidDataSource",
         matchIfMissing = true)
-@MapperScan("com.dingxuan.**.dao")
+@MapperScan("com.jackson.**.dao")
 public class DatabaseConfiguration implements EnvironmentAware {
 
     private final Logger logger = LoggerFactory.getLogger(DatabaseConfiguration.class);
