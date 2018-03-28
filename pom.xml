@@ -14,8 +14,6 @@
     <modules>
         <module>core</module>
         <module>activiti-demo</module>
+        <module>parent</module>
     </modules>
-
-
-
 </project>
