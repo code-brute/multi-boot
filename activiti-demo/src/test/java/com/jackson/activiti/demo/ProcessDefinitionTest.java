@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.zip.ZipInputStream;
 
 /**
- * @Description:
+ * @Description: 流程定义是不能修改的
  * @author: mitnick
  * @date: 2018-03-28 下午2:33
  */
@@ -117,17 +117,26 @@ public class ProcessDefinitionTest extends ActivitiDemoApplicationTests{
         log.debug("=============={}", names);
 
         String imageName = null;
-        if (Objects.nonNull(names) && names.isEmpty()) {
+        if (Objects.nonNull(names) && !names.isEmpty()) {
             for (String name : names) {
                 if (name.indexOf(".png") > 0) {
                     imageName = name;
                 }
             }
         }
+        log.debug("========={} ",imageName);
         if (StringUtils.isNotBlank(imageName)) {
-            File file = new File("");
+            File file = new File("/Users/mitnick/code/imageName");
             InputStream inputStream =  repositoryService.getResourceAsStream(deploymentId, imageName);
             FileUtils.copyInputStreamToFile(inputStream,file);
         }
+    }
+
+    /**
+     *
+     */
+    @Test
+    public void lastVersionProcessDefinition(){
+
     }
 }
