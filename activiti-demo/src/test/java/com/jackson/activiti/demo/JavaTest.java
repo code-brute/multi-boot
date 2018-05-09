@@ -17,5 +17,9 @@ public class JavaTest {
        deque.push("22222");
 
         System.out.println(deque.contains("11111"));
+
+        String inte = "123434321234";
+        System.out.println(inte.matches("[0-9]+"));
+        System.out.println(Integer.parseInt("2147483648"));
     }
 }

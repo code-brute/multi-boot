@@ -11,7 +11,10 @@ import org.springframework.util.FileCopyUtils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.zip.ZipInputStream;
 
@@ -68,9 +71,9 @@ public class ProcessDefinitionTest extends ActivitiDemoApplicationTests{
     @Test
     public void queryProcessesDefinition(){
         List<ProcessDefinition> processDefinitions = repositoryService.createProcessDefinitionQuery()
-                .processDefinitionId("请假流程:1:40009") // 添加查询条件
-                .processDefinitionName("请假流程")
-                .processDefinitionKey("请假流程")
+//                .processDefinitionId("请假流程:1:40009") // 添加查询条件
+//                .processDefinitionName("请假流程")
+//                .processDefinitionKey("请假流程")
                 .orderByProcessDefinitionVersion().asc() // 按照版本的升序排列
 //                .listPage() 分页查询
 //                .singleResult() 返回唯一结果集
@@ -84,7 +87,7 @@ public class ProcessDefinitionTest extends ActivitiDemoApplicationTests{
             log.debug("id:{}, name:{}, key:{}, version:{}, resourceName:{}, category:{} ,description:{}  ",
                     processDefinition.getId(),processDefinition.getName(),processDefinition.getKey(),processDefinition.getVersion(),
                     processDefinition.getResourceName(),processDefinition.getCategory(),processDefinition.getDescription());
-            log.debug("============================================");
+            log.debug("============================================{} ", processDefinition.getDeploymentId());
         }
     }
 
@@ -95,7 +98,7 @@ public class ProcessDefinitionTest extends ActivitiDemoApplicationTests{
     public void deleteProcess(){
         // 普通删除 如果当前规则下有 正在执行的流程，则抛出异常
 
-        String deploymentId = "100001";
+        String deploymentId = "112501";
         try {
             log.info("普通删除 如果当前规则下有 正在执行的流程，则抛出异常");
             repositoryService.deleteDeployment(deploymentId);
@@ -133,10 +136,30 @@ public class ProcessDefinitionTest extends ActivitiDemoApplicationTests{
     }
 
     /**
-     *
+     * 查询最新版本的流程
      */
     @Test
     public void lastVersionProcessDefinition(){
 
+        List<ProcessDefinition> list = repositoryService.createProcessDefinitionQuery()
+                .orderByProcessDefinitionVersion() // 创建流程
+                .asc()// 升序排列
+                .list();// 返回集合
+        Map<String, ProcessDefinition> pdMap = new LinkedHashMap<>();
+        if (Objects.nonNull(list) && !list.isEmpty()) {
+            for (ProcessDefinition pd : list) {
+                pdMap.put(pd.getKey(), pd);
+            }
+        }
+        List<ProcessDefinition> pdList = new ArrayList<>(pdMap.values());
+        for (ProcessDefinition processDefinition : pdList) {
+            log.debug("id:{}, name:{}, key:{}, version:{}, resourceName:{}, category:{} ,description:{}  ",
+                    processDefinition.getId(),processDefinition.getName(),processDefinition.getKey(),processDefinition.getVersion(),
+                    processDefinition.getResourceName(),processDefinition.getCategory(),processDefinition.getDescription());
+            log.debug("============================================");
+        }
     }
+
+
+
 }
