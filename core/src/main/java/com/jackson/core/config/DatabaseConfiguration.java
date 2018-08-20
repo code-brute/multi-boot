@@ -28,9 +28,7 @@ import java.util.Arrays;
 import javax.sql.DataSource;
 
 /**
- *
- * 凡是被Spring管理的类，实现接口 EnvironmentAware 重写方法 setEnvironment
- * 可以在工程启动时，获取到系统环境变量和application配置文件中的变量。
+ * 凡是被Spring管理的类，实现接口 EnvironmentAware 重写方法 setEnvironment 可以在工程启动时，获取到系统环境变量和application配置文件中的变量。
  *
  * @Description:
  * @author: Mitnick
@@ -59,8 +57,8 @@ public class DatabaseConfiguration implements EnvironmentAware {
     @Bean
     public ServletRegistrationBean servletRegistrationBean() {
         logger.debug("连接池初始化：开始注册DRUID。");
-        logger.debug("连接池初始化：DRUID白名单【{}】",propertyResolver.getProperty("allow"));
-        logger.debug("连接池初始化：黑名单【{}】",propertyResolver.getProperty("deny"));
+        logger.debug("连接池初始化：DRUID白名单【{}】", propertyResolver.getProperty("allow"));
+        logger.debug("连接池初始化：黑名单【{}】", propertyResolver.getProperty("deny"));
         logger.debug("连接池初始化：DRUID登陆名【{}】", propertyResolver.getProperty("loginUsername"));
         logger.debug("连接池初始化：DRUID密码【{}】", propertyResolver.getProperty("loginPassword"));
         ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(), "/druid/*");
@@ -96,8 +94,6 @@ public class DatabaseConfiguration implements EnvironmentAware {
 
     /**
      * 数据源配置
-     *
-     * @return
      */
     @Bean
     @Primary
@@ -110,9 +106,9 @@ public class DatabaseConfiguration implements EnvironmentAware {
                     Arrays.toString(environment.getActiveProfiles()));
             throw new ApplicationContextException("Database connection pool is not configured correctly");
         }
-        logger.debug("连接池初始化：URL【{}】",propertyResolver.getProperty("url"));
-        logger.debug("连接池初始化：USERNAME【{}】",propertyResolver.getProperty("username"));
-        logger.debug("连接池初始化：PASSWORD【{}】",propertyResolver.getProperty("password"));
+        logger.debug("连接池初始化：URL【{}】", propertyResolver.getProperty("url"));
+        logger.debug("连接池初始化：USERNAME【{}】", propertyResolver.getProperty("username"));
+        logger.debug("连接池初始化：PASSWORD【{}】", propertyResolver.getProperty("password"));
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setUrl(propertyResolver.getProperty("url"));
         druidDataSource.setDriverClassName(propertyResolver.getProperty("driver-class-name"));
