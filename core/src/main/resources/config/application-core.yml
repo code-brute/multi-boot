@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: core
+  datasource:
+    type: @type@
+    driverClassName: @driverClassName@
+    url: @url@
+    username: @username@
+    password: @password@
+    initialSize: @initialSize@
+    minIdle: @minIdle@
+    maxActive: @maxActive@
+    maxWait: @maxWait@
+    poolPreparedStatements: @poolPreparedStatements@
+    maxOpenPreparedStatements: @maxOpenPreparedStatements@
+    validationQuery: @validationQuery@
+    testOnBorrow: @testOnBorrow@
+    testOnReturn: @testOnReturn@
+    testWhileIdle: @testWhileIdle@
+    timeBetweenEvictionRunsMillis: @timeBetweenEvictionRunsMillis@
+    minEvictableIdleTimeMillis: @minEvictableIdleTimeMillis@
+    filters: @filters@
+    allow: @allow@
+    deny: @deny@
+    loginUsername: @loginUsername@
+    loginPassword: @loginPassword@
+    resetEnable: @resetEnable@
+
+mybatis:
+  mapper-locations: @mapper-locations@
